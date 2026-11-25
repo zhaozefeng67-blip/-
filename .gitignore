@@ -1,0 +1,20 @@
+# data and run artefacts are not versioned
+02_data/
+03_runs/
+03_runs_v1/
+03_profile/
+04_figs/*.csv
+04_figs/*.txt
+05_slurm/jobs/
+05_slurm/profile_jobs/
+05_slurm/matrix_*.csv
+pysite/
+logs/
+
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.DS_Store
+Thumbs.db

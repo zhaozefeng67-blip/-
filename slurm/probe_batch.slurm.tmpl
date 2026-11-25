@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH --job-name=pbsgbatch_PLACEHOLDER
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:4090:1
+#SBATCH --exclude=hpcgpu03
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=32G
+#SBATCH --time=1:30:00
+#SBATCH --output=/home/student/u430026290/pbsg_logs/batch_PLACEHOLDER.out
+#SBATCH --error=/home/student/u430026290/pbsg_logs/batch_PLACEHOLDER.err
+set -uo pipefail
+export PYTHONPATH=$HOME/exp/pbsg/pysite:$HOME/exp/pbsg/01_code
+export PYTHONUNBUFFERED=1
+export OMP_NUM_THREADS=8
+cd $HOME/exp/pbsg
+exec $HOME/exp/desub/venv/bin/python 01_code/scripts/probe_batch.py --dataset PLACEHOLDER --times 2

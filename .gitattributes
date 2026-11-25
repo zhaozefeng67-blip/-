@@ -1,0 +1,6 @@
+# keep LF in the repo: the shell scripts and Python are run on Linux
+* text=auto eol=lf
+*.png binary
+*.npz binary
+*.npy binary
+*.pkl binary
